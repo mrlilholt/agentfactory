@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-CUE-06 Do and Don't Cues</title>
+  <desc id="desc">Visual cue reference for allowed actions, forbidden actions, locked areas, and mission gate requirements.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .card-title { font-size: 22px; font-weight: 700; }
+    .card-text { font-size: 16px; font-weight: 600; }
+    .small { font-size: 13px; font-weight: 500; }
+  </style>
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#B3B3B3" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-CUE-06 DO / DON'T CUES</text>
+  <text x="46" y="86" class="mono subtitle">USE THESE SYMBOLS ON EVERY STEP PAGE</text>
+
+  <rect x="46" y="116" width="276" height="186" rx="14" class="paper ink" stroke-width="2.5"/>
+  <text x="72" y="156" class="label card-title">DO</text>
+  <image href="../icons/check.svg" x="244" y="130" width="40" height="40"/>
+  <text x="72" y="196" class="label card-text">Complete mission.md first</text>
+  <text x="72" y="222" class="label small">Allowed action block</text>
+  <text x="72" y="244" class="label small">Use solid arrow flow</text>
+
+  <rect x="342" y="116" width="276" height="186" rx="14" class="paper ink" stroke-width="2.5"/>
+  <text x="368" y="156" class="label card-title">DON'T</text>
+  <image href="../icons/cross.svg" x="540" y="130" width="40" height="40"/>
+  <text x="368" y="196" class="label card-text">Skip mission.md gate</text>
+  <text x="368" y="222" class="label small">Forbidden action block</text>
+  <text x="368" y="244" class="label small">Show crossed line overlay</text>
+
+  <rect x="638" y="116" width="276" height="186" rx="14" class="paper ink" stroke-width="2.5"/>
+  <text x="664" y="156" class="label card-title">LOCKED</text>
+  <image href="../icons/lock.svg" x="836" y="130" width="40" height="40"/>
+  <rect x="664" y="184" width="224" height="70" rx="8" fill="url(#hatch)" class="ink" stroke-width="1.5"/>
+  <text x="674" y="224" class="label card-text">No edits in this zone</text>
+  <text x="664" y="276" class="label small">Use 45 degree hatch fill</text>
+
+  <rect x="46" y="326" width="868" height="186" rx="14" class="paper ink" stroke-width="2.5"/>
+  <text x="72" y="366" class="label card-title">MISSION GATE RULE</text>
+  <image href="../icons/mission.svg" x="72" y="386" width="34" height="34"/>
+  <text x="118" y="408" class="label card-text">Project name + problem + outcome + users + success + non-goals + tone</text>
+  <path d="M72 436H470" class="ink" stroke-width="2"/>
+  <text x="72" y="460" class="mono small">Gate pass condition: mission.md complete before any agent workflow start.</text>
+  <image href="../icons/check.svg" x="72" y="474" width="22" height="22"/>
+  <text x="102" y="490" class="label small">If complete: continue to Project Lead sequence.</text>
+  <image href="../icons/cross.svg" x="488" y="474" width="22" height="22"/>
+  <text x="518" y="490" class="label small">If incomplete: stop and finish mission.md.</text>
+</svg>

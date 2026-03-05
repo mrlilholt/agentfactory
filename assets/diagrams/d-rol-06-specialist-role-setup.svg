@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-ROL-06 Specialist Role Setup</title>
+  <desc id="desc">Create and rename the four specialist role chats: Designer Lead, Builder Lead, Tester Lead, and Documentarian Lead. Do not mix prompt blocks across chats.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .stepnum { font-size: 18px; font-weight: 700; }
+    .role { font-size: 18px; font-weight: 700; }
+    .micro { font-size: 12px; font-weight: 500; }
+    .rule { font-size: 16px; font-weight: 700; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-ROL-06 SPECIALIST ROLE SETUP</text>
+  <text x="46" y="86" class="mono subtitle">CREATE PROMPT, THEN RENAME EACH CHAT</text>
+
+  <rect x="42" y="118" width="206" height="286" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="74" cy="152" r="16" class="paper ink" stroke-width="2"/>
+  <text x="69" y="158" class="mono stepnum">1</text>
+  <image href="../icons/agent.svg" x="98" y="136" width="24" height="24"/>
+  <text x="58" y="190" class="label role">Designer Lead</text>
+  <text x="58" y="216" class="label micro">Visual system role</text>
+  <text x="58" y="236" class="label micro">Layout, color, type, UX</text>
+  <text x="58" y="268" class="mono micro">Paste Designer prompt</text>
+  <rect x="58" y="306" width="174" height="70" rx="10" class="paper ink" stroke-width="2"/>
+  <text x="70" y="334" class="mono micro">Rename chat:</text>
+  <text x="70" y="356" class="label micro">Designer Lead</text>
+
+  <rect x="266" y="118" width="206" height="286" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="298" cy="152" r="16" class="paper ink" stroke-width="2"/>
+  <text x="293" y="158" class="mono stepnum">2</text>
+  <image href="../icons/agent.svg" x="322" y="136" width="24" height="24"/>
+  <text x="282" y="190" class="label role">Builder Lead</text>
+  <text x="282" y="216" class="label micro">Code implementation role</text>
+  <text x="282" y="236" class="label micro">HTML, CSS, JavaScript</text>
+  <text x="282" y="268" class="mono micro">Paste Builder prompt</text>
+  <rect x="282" y="306" width="174" height="70" rx="10" class="paper ink" stroke-width="2"/>
+  <text x="294" y="334" class="mono micro">Rename chat:</text>
+  <text x="294" y="356" class="label micro">Builder Lead</text>
+
+  <rect x="490" y="118" width="206" height="286" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="522" cy="152" r="16" class="paper ink" stroke-width="2"/>
+  <text x="517" y="158" class="mono stepnum">3</text>
+  <image href="../icons/agent.svg" x="546" y="136" width="24" height="24"/>
+  <text x="506" y="190" class="label role">Tester Lead</text>
+  <text x="506" y="216" class="label micro">Quality check role</text>
+  <text x="506" y="236" class="label micro">Bugs, usability, fixes</text>
+  <text x="506" y="268" class="mono micro">Paste Tester prompt</text>
+  <rect x="506" y="306" width="174" height="70" rx="10" class="paper ink" stroke-width="2"/>
+  <text x="518" y="334" class="mono micro">Rename chat:</text>
+  <text x="518" y="356" class="label micro">Tester Lead</text>
+
+  <rect x="714" y="118" width="206" height="286" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="746" cy="152" r="16" class="paper ink" stroke-width="2"/>
+  <text x="741" y="158" class="mono stepnum">4</text>
+  <image href="../icons/agent.svg" x="770" y="136" width="24" height="24"/>
+  <text x="730" y="190" class="label role">Documentarian</text>
+  <text x="730" y="216" class="label micro">Project records role</text>
+  <text x="730" y="236" class="label micro">Logs, decisions, summaries</text>
+  <text x="730" y="268" class="mono micro">Paste Docs prompt</text>
+  <rect x="730" y="306" width="174" height="70" rx="10" class="paper ink" stroke-width="2"/>
+  <text x="742" y="334" class="mono micro">Rename chat:</text>
+  <text x="742" y="356" class="label micro">Documentarian</text>
+
+  <path d="M248 260H266" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M472 260H490" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M696 260H714" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="42" y="430" width="878" height="86" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/warning.svg" x="66" y="458" width="22" height="22"/>
+  <text x="100" y="475" class="label rule">Do not mix prompt blocks across chats.</text>
+  <text x="100" y="498" class="mono micro">Each prompt must stay in its matching role chat.</text>
+</svg>

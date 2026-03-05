@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-STR-05 Startup Flow</title>
+  <desc id="desc">Startup flow from opening Codex to sending the Project Lead command in the correct order.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .stepnum { font-size: 22px; font-weight: 700; }
+    .steplabel { font-size: 16px; font-weight: 600; }
+    .micro { font-size: 12px; font-weight: 500; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-STR-05 STARTUP FLOW</text>
+  <text x="46" y="86" class="mono subtitle">OPEN -> OPEN -> OPEN -> SEND</text>
+
+  <rect x="50" y="134" width="196" height="230" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="84" cy="172" r="16" class="paper ink" stroke-width="2"/>
+  <text x="79" y="179" class="mono stepnum">1</text>
+  <image href="../icons/run.svg" x="104" y="157" width="24" height="24"/>
+  <text x="58" y="218" class="label steplabel">Open Codex</text>
+  <text x="58" y="242" class="label micro">Launch app on Mac</text>
+
+  <rect x="270" y="134" width="196" height="230" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="304" cy="172" r="16" class="paper ink" stroke-width="2"/>
+  <text x="299" y="179" class="mono stepnum">2</text>
+  <image href="../icons/folder.svg" x="324" y="157" width="24" height="24"/>
+  <text x="278" y="218" class="label steplabel">Open Project Folder</text>
+  <text x="278" y="242" class="label micro">Use renamed folder</text>
+
+  <rect x="490" y="134" width="196" height="230" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="524" cy="172" r="16" class="paper ink" stroke-width="2"/>
+  <text x="519" y="179" class="mono stepnum">3</text>
+  <image href="../icons/project-lead.svg" x="544" y="157" width="24" height="24"/>
+  <text x="498" y="218" class="label steplabel">Open Project Lead</text>
+  <text x="498" y="242" class="label micro">Chat must be ready</text>
+
+  <rect x="710" y="134" width="196" height="230" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="744" cy="172" r="16" class="paper ink" stroke-width="2"/>
+  <text x="739" y="179" class="mono stepnum">4</text>
+  <image href="../icons/chat.svg" x="764" y="157" width="24" height="24"/>
+  <text x="718" y="218" class="label steplabel">Send Command</text>
+  <text x="718" y="242" class="label micro">Exact text only</text>
+  <rect x="724" y="264" width="168" height="84" rx="8" class="paper ink" stroke-width="1.5"/>
+  <text x="734" y="290" class="mono micro">Read agentCom.md</text>
+  <text x="734" y="310" class="mono micro">and do your</text>
+  <text x="734" y="330" class="mono micro">assigned work.</text>
+
+  <path d="M246 248H270" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M466 248H490" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M686 248H710" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="50" y="402" width="856" height="104" rx="12" class="paper ink" stroke-width="2"/>
+  <image href="../icons/check.svg" x="72" y="438" width="24" height="24"/>
+  <text x="108" y="455" class="label steplabel">Do not change the order. Each panel must be done before the next.</text>
+</svg>

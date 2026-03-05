@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-SYS-01 System Map</title>
+  <desc id="desc">Human Director talks to Project Manager, and Project Manager coordinates specialist leads. Direct specialist-to-specialist communication is not allowed.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .node-title { font-size: 18px; font-weight: 600; }
+    .node-sub { font-size: 13px; font-weight: 500; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-SYS-01 SYSTEM MAP</text>
+  <text x="46" y="86" class="mono subtitle">ALWAYS TALK TO PROJECT MANAGER FIRST</text>
+
+  <rect x="56" y="210" width="230" height="134" rx="14" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/person.svg" x="82" y="230" width="62" height="90"/>
+  <text x="176" y="270" class="label node-title" text-anchor="middle">Human Director</text>
+  <text x="176" y="292" class="label node-sub" text-anchor="middle">you</text>
+
+  <rect x="354" y="204" width="242" height="146" rx="16" fill="none" class="ink" stroke-width="2.5" stroke-dasharray="8 6"/>
+  <rect x="360" y="210" width="230" height="134" rx="14" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/project-lead.svg" x="388" y="246" width="38" height="38"/>
+  <text x="475" y="270" class="label node-title" text-anchor="middle">Project Manager</text>
+  <text x="475" y="292" class="label node-sub" text-anchor="middle">set up this role now</text>
+  <text x="475" y="176" class="mono subtitle" text-anchor="middle">YOU ARE HERE</text>
+  <path d="M475 182V206" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="664" y="72" width="240" height="92" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/agent.svg" x="686" y="100" width="30" height="30"/>
+  <text x="726" y="112" class="label node-title">Designer Lead</text>
+  <text x="726" y="132" class="label node-sub">visual system</text>
+
+  <rect x="664" y="182" width="240" height="92" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/agent.svg" x="686" y="210" width="30" height="30"/>
+  <text x="726" y="222" class="label node-title">Builder Lead</text>
+  <text x="726" y="242" class="label node-sub">implementation</text>
+
+  <rect x="664" y="292" width="240" height="92" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/agent.svg" x="686" y="320" width="30" height="30"/>
+  <text x="726" y="332" class="label node-title">Tester Lead</text>
+  <text x="726" y="352" class="label node-sub">quality checks</text>
+
+  <rect x="664" y="402" width="240" height="92" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/agent.svg" x="686" y="430" width="30" height="30"/>
+  <text x="726" y="442" class="label node-title">Documentarian</text>
+  <text x="726" y="462" class="label node-sub">records + copy</text>
+
+  <path d="M286 277H360" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M590 250H664" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M590 277H664" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M590 304H664" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M590 331H664" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M784 164V182" class="ink" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M784 274V292" class="ink" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M784 384V402" class="ink" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <path d="M764 204L804 244" class="ink" stroke-width="3"/>
+  <path d="M804 204L764 244" class="ink" stroke-width="3"/>
+  <text x="820" y="226" class="mono subtitle">NO DIRECT</text>
+
+  <rect x="56" y="372" width="534" height="122" rx="12" class="paper ink" stroke-width="2.5"/>
+  <image href="../icons/check.svg" x="76" y="410" width="26" height="26"/>
+  <text x="114" y="428" class="label node-title">Do: human -> Project Manager -> assigned lead</text>
+  <image href="../icons/cross.svg" x="76" y="446" width="26" height="26"/>
+  <text x="114" y="464" class="label node-title">Don't: specialist lead &lt;-&gt; specialist lead chat</text>
+</svg>

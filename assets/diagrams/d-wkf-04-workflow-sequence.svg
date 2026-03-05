@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-WKF-04 Workflow Sequence</title>
+  <desc id="desc">Eight-step sequence for student setup. Follow arrows in order, then loop back after step eight.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .stepnum { font-size: 24px; font-weight: 700; }
+    .steplabel { font-size: 13px; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-WKF-04 WORKFLOW SEQUENCE</text>
+  <text x="46" y="86" class="mono subtitle">FOLLOW 1 -> 8 IN ORDER</text>
+
+  <rect x="54" y="122" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="130" y="164" class="label stepnum">1</text>
+  <text x="83" y="192" class="label steplabel">Download starter set</text>
+
+  <rect x="266" y="122" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="342" y="164" class="label stepnum">2</text>
+  <text x="285" y="192" class="label steplabel">Copy + rename folder</text>
+
+  <rect x="478" y="122" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="554" y="164" class="label stepnum">3</text>
+  <text x="505" y="192" class="label steplabel">Complete mission.md</text>
+
+  <rect x="690" y="122" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="766" y="164" class="label stepnum">4</text>
+  <text x="727" y="192" class="label steplabel">Open Codex + folder</text>
+
+  <rect x="690" y="286" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="766" y="328" class="label stepnum">5</text>
+  <text x="730" y="356" class="label steplabel">Open lead chats</text>
+
+  <rect x="478" y="286" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="554" y="328" class="label stepnum">6</text>
+  <text x="502" y="356" class="label steplabel">Paste role prompts</text>
+
+  <rect x="266" y="286" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="342" y="328" class="label stepnum">7</text>
+  <text x="284" y="356" class="label steplabel">Start PM + sequence</text>
+
+  <rect x="54" y="286" width="184" height="112" rx="12" class="paper ink" stroke-width="2.5"/>
+  <text x="130" y="328" class="label stepnum">8</text>
+  <text x="80" y="356" class="label steplabel">Run first cycle</text>
+
+  <path d="M238 178H266" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M450 178H478" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M662 178H690" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M782 234V286" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M690 342H662" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M478 342H450" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M266 342H238" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <path d="M146 398C146 460 794 460 794 398" class="ink" stroke-width="1.5" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+  <text x="336" y="494" class="mono subtitle">Repeat cycle after Step 8</text>
+</svg>

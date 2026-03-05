@@ -1,0 +1,2 @@
+Paste one matching role prompt into each lead chat.
+Do not paste a prompt into the wrong role chat.

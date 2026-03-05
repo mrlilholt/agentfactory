@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">D-STA-00 Starter Set Flow</title>
+  <desc id="desc">Starter set workflow: download starter set, duplicate the folder, rename it to student project name, then open mission.md.</desc>
+  <style>
+    .ink { stroke: #111111; }
+    .paper { fill: #FFFFFF; }
+    .label { fill: #111111; font-family: 'IBM Plex Sans', sans-serif; }
+    .mono { fill: #111111; font-family: 'IBM Plex Mono', monospace; }
+    .title { font-size: 26px; font-weight: 700; }
+    .subtitle { font-size: 14px; font-weight: 500; }
+    .stepnum { font-size: 22px; font-weight: 700; }
+    .steplabel { font-size: 16px; font-weight: 600; }
+    .micro { font-size: 12px; font-weight: 500; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect x="18" y="18" width="924" height="524" rx="18" class="paper ink" stroke-width="2.5"/>
+  <text x="46" y="62" class="label title">D-STA-00 STARTER-SET FLOW</text>
+  <text x="46" y="86" class="mono subtitle">REQUIRED BEFORE ANY AGENT WORKFLOW</text>
+
+  <rect x="50" y="126" width="196" height="246" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="84" cy="164" r="16" class="paper ink" stroke-width="2"/>
+  <text x="79" y="171" class="mono stepnum">1</text>
+  <image href="../icons/download.svg" x="104" y="149" width="24" height="24"/>
+  <text x="58" y="210" class="label steplabel">Download starter set</text>
+  <text x="58" y="236" class="label micro">Open class drive link</text>
+  <text x="58" y="256" class="label micro">Save folder to Mac</text>
+
+  <rect x="270" y="126" width="196" height="246" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="304" cy="164" r="16" class="paper ink" stroke-width="2"/>
+  <text x="299" y="171" class="mono stepnum">2</text>
+  <image href="../icons/copy.svg" x="324" y="149" width="24" height="24"/>
+  <text x="278" y="210" class="label steplabel">Find Folder on your</text>
+  <text x="278" y="230" class="label steplabel">computer</text>
+  <text x="278" y="252" class="label micro">Locate in Downloads</text>
+  <text x="278" y="272" class="label micro">Confirm it is unzipped</text>
+
+  <rect x="490" y="126" width="196" height="246" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="524" cy="164" r="16" class="paper ink" stroke-width="2"/>
+  <text x="519" y="171" class="mono stepnum">3</text>
+  <image href="../icons/rename.svg" x="544" y="149" width="24" height="24"/>
+  <text x="498" y="210" class="label steplabel">Rename folder</text>
+  <text x="498" y="236" class="label micro">Use your project name</text>
+  <text x="498" y="256" class="label micro">Example: ai-agency-lab</text>
+
+  <rect x="710" y="126" width="196" height="246" rx="14" class="paper ink" stroke-width="2.5"/>
+  <circle cx="744" cy="164" r="16" class="paper ink" stroke-width="2"/>
+  <text x="739" y="171" class="mono stepnum">4</text>
+  <image href="../icons/mission.svg" x="764" y="149" width="24" height="24"/>
+  <text x="718" y="210" class="label steplabel">Open mission.md</text>
+  <text x="718" y="236" class="label micro">Complete every section</text>
+  <text x="718" y="256" class="label micro">Then continue to setup</text>
+
+  <path d="M246 248H270" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M466 248H490" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M686 248H710" class="ink" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="50" y="402" width="856" height="104" rx="12" class="paper ink" stroke-width="2"/>
+  <image href="../icons/warning.svg" x="72" y="438" width="24" height="24"/>
+  <text x="106" y="456" class="label steplabel">Stop rule: do not start agent workflow before Step 4 is complete.</text>
+</svg>

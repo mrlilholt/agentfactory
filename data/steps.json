@@ -1,0 +1,484 @@
+{
+  "totalSteps": 8,
+  "steps": [
+    {
+      "id": 1,
+      "slug": "01-download-starter-set",
+      "path": "steps/01-download-starter-set.html",
+      "navLabel": "Download Starter Set",
+      "title": "Download Starter Set",
+      "stepNumberText": "01",
+      "goal": "Get the required starter files.",
+      "goalIcon": "download",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "download",
+          "line": "Open the class starter-set folder link.",
+          "button": {
+            "label": "Open Link",
+            "type": "external",
+            "value": "https://drive.google.com/drive/folders/1Qgy3w4FKWmipEu_ADLoyrOPy5-MLnvoR?usp=drive_link"
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "copy",
+          "line": "Download the folder so it is on your Mac.",
+          "button": {
+            "label": "Copy Link",
+            "type": "copy",
+            "value": "https://drive.google.com/drive/folders/1Qgy3w4FKWmipEu_ADLoyrOPy5-MLnvoR?usp=drive_link"
+          }
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-STA-00",
+        "src": "d-sta-00-starter-flow.svg",
+        "alt": "Starter flow diagram showing download, copy, rename, and open mission",
+        "callouts": [
+          "Download",
+          "Find Folder",
+          "Rename Folder",
+          "Open mission"
+        ]
+      },
+      "template": {
+        "fileLabel": "starter-set-link.txt",
+        "templateAsset": "starter-set-link.txt",
+        "copyLabel": "Copy Link"
+      },
+      "checks": [
+        "I downloaded the starter set folder.",
+        "The folder is visible on my Mac."
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "02-copy-and-rename-folder",
+      "path": "steps/02-copy-and-rename-folder.html",
+      "navLabel": "Understand the Folder",
+      "title": "Understand the Folder",
+      "stepNumberText": "02",
+      "goal": "Understand your project folder.",
+      "goalIcon": "folder",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "copy",
+          "line": "Find the starter folder on your computer.",
+          "button": {
+            "label": "Copy Check",
+            "type": "copy",
+            "value": "Find the folder named with your project."
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename folder so it is easy to find later.",
+          "button": {
+            "label": "Copy Rule",
+            "type": "copy",
+            "value": "Use letters, numbers, and dashes only."
+          }
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-FLD-03",
+        "src": "d-fld-03-folder-tree.svg",
+        "alt": "Folder tree diagram with renamed project folder",
+        "callouts": [
+          "Folder",
+          "Find Folder",
+          "Rename",
+          "Open"
+        ]
+      },
+      "template": {
+        "fileLabel": "folder-rename-checklist.txt",
+        "templateAsset": "folder-rename-checklist.txt",
+        "copyLabel": "Copy Checklist"
+      },
+      "checks": [
+        "I found my project folder on my computer.",
+        "My folder name is clear and easy to find."
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "03-complete-mission-md",
+      "path": "steps/03-complete-mission-md.html",
+      "navLabel": "Complete mission.md",
+      "title": "Complete mission.md",
+      "stepNumberText": "03",
+      "goal": "Define your project mission first.",
+      "goalIcon": "mission",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "file",
+          "line": "Open mission.md inside your renamed folder."
+        },
+        {
+          "panelId": "P3",
+          "mode": "warn",
+          "iconKey": "warning",
+          "line": "Answer every mission section before any agent work."
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-CUE-06",
+        "src": "d-cue-06-do-dont-cues.svg",
+        "alt": "Do and do not cues showing mission gate before workflow",
+        "callouts": [
+          "Do",
+          "Gate",
+          "No skip",
+          "Ready"
+        ]
+      },
+      "template": {
+        "fileLabel": "mission-checklist.txt",
+        "templateAsset": "mission-checklist.txt",
+        "description": "Every item in this checklist is required for mission.md to work as the project reference that guides your agents toward one shared goal.",
+        "copyLabel": "Copy Checklist"
+      },
+      "checks": [
+        "I completed all mission.md sections.",
+        "I did not skip mission.md before workflow."
+      ]
+    },
+    {
+      "id": 4,
+      "slug": "04-open-codex-and-folder",
+      "path": "steps/04-open-codex-and-folder.html",
+      "navLabel": "Open Codex and Folder",
+      "title": "Open Codex and Folder",
+      "stepNumberText": "04",
+      "goal": "Download and open the workspace in Codex.",
+      "goalIcon": "chat",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "run",
+          "line": "Launch Codex on your Mac.",
+          "button": {
+            "label": "Copy Step",
+            "type": "copy",
+            "value": "Open Codex"
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "folder",
+          "line": "Open your renamed project folder in Codex.",
+          "referenceImage": {
+            "src": "assets/references/codex-open-folder-reference.svg",
+            "alt": "Codex reference showing where to click Add new project and choose your folder.",
+            "caption": "Reference: In Codex, click Add new project, then select your folder."
+          },
+          "button": {
+            "label": "Copy Check",
+            "type": "copy",
+            "value": "Confirm mission.md, kernel.md, and agentCom.md are in the folder."
+          }
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-STR-05",
+        "src": "d-str-05-startup-flow.svg",
+        "alt": "Startup flow diagram showing Codex and project folder open sequence",
+        "callouts": [
+          "Open Codex",
+          "Open folder",
+          "Check files",
+          "Continue"
+        ]
+      },
+      "template": {
+        "fileLabel": "required-files.txt",
+        "templateAsset": "required-files.txt",
+        "copyLabel": "Copy File Names"
+      },
+      "checks": [
+        "Codex is open.",
+        "My renamed folder is open in Codex."
+      ]
+    },
+    {
+      "id": 5,
+      "slug": "05-open-agent-chats",
+      "path": "steps/05-open-agent-chats.html",
+      "navLabel": "Project Manager Role",
+      "title": "Set Up Project Manager Role",
+      "stepNumberText": "05",
+      "goal": "Set up project manager role.",
+      "goalIcon": "project-lead",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Create the project manager using the following prompt.",
+          "promptBlock": "Paste this prompt:\nYou are the Project Lead agent for a small digital product studio.\nRead the following files:\nmission.md\nstudioKernel.md\nagentCommunications.md\nYour responsibilities:\n- plan the project\n- break the project into tasks\n- assign tasks to the correct agent\n- decide the sequence of work\nRules:\n- agents never speak directly to each other\n- communication only happens through agentCommunications.md\n- the Human Director gives instructions to you\nAlways output the next agent sequence.\nExample:\nNext Agent Sequence:\n1 Designer Lead\n2 Builder Lead\n3 Tester Lead\n4 Documentarian Lead",
+          "button": {
+            "label": "Copy Prompt",
+            "type": "copy",
+            "value": "You are the Project Lead agent for a small digital product studio.\nRead the following files:\nmission.md\nstudioKernel.md\nagentCommunications.md\nYour responsibilities:\n- plan the project\n- break the project into tasks\n- assign tasks to the correct agent\n- decide the sequence of work\nRules:\n- agents never speak directly to each other\n- communication only happens through agentCommunications.md\n- the Human Director gives instructions to you\nAlways output the next agent sequence.\nExample:\nNext Agent Sequence:\n1 Designer Lead\n2 Builder Lead\n3 Tester Lead\n4 Documentarian Lead"
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename the chat to Project Manager."
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-SYS-01",
+        "src": "d-sys-01-system-map.svg",
+        "alt": "System map with Project Manager highlighted as the current setup step",
+        "callouts": [
+          "Human",
+          "Project Manager",
+          "No Direct",
+          "Flow"
+        ]
+      },
+      "template": {
+        "fileLabel": "project-manager-prompt.txt",
+        "templateAsset": "project-manager-prompt.txt",
+        "copyLabel": "Copy Prompt"
+      },
+      "checks": [
+        "I created the Project Manager chat.",
+        "The chat is renamed to Project Manager."
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "06-paste-role-prompts",
+      "path": "steps/06-paste-role-prompts.html",
+      "navLabel": "Create Specialist Roles",
+      "title": "Create Specialist Lead Roles",
+      "stepNumberText": "06",
+      "goal": "Create the four specialist role chats with the correct prompts.",
+      "goalIcon": "project-lead",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Create Designer Lead Role, copy and paste this prompt:",
+          "promptBlock": "Prompt:\nYou are the Designer Lead agent.\nYour job is visual design.\nFocus on:\n- layout\n- colors\n- fonts\n- user experience\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen assigned a task:\n- propose layout ideas\n- generate CSS suggestions\n- describe design improvements",
+          "button": {
+            "label": "Copy Designer Prompt",
+            "type": "copy",
+            "value": "You are the Designer Lead agent.\nYour job is visual design.\nFocus on:\n- layout\n- colors\n- fonts\n- user experience\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen assigned a task:\n- propose layout ideas\n- generate CSS suggestions\n- describe design improvements"
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename this chat: \"Designer Lead\"."
+        },
+        {
+          "panelId": "P4",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Create Builder Lead Role, copy and paste this prompt:",
+          "promptBlock": "Prompt:\nYou are the Builder Lead agent.\nYou write and improve the project code.\nFocus on:\n- HTML\n- CSS\n- JavaScript\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen assigned a task:\n- produce clean beginner-friendly code\n- include comments explaining the code.",
+          "button": {
+            "label": "Copy Builder Prompt",
+            "type": "copy",
+            "value": "You are the Builder Lead agent.\nYou write and improve the project code.\nFocus on:\n- HTML\n- CSS\n- JavaScript\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen assigned a task:\n- produce clean beginner-friendly code\n- include comments explaining the code."
+          }
+        },
+        {
+          "panelId": "P5",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename this chat: \"Builder Lead\"."
+        },
+        {
+          "panelId": "P6",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Create Tester Lead Role, copy and paste this prompt:",
+          "promptBlock": "Prompt:\nYou are the Tester Lead agent.\nYour job is to test the project.\nFocus on:\n- bugs\n- broken features\n- usability problems\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen testing:\n- describe bugs\n- explain how to reproduce them\n- suggest fixes",
+          "button": {
+            "label": "Copy Tester Prompt",
+            "type": "copy",
+            "value": "You are the Tester Lead agent.\nYour job is to test the project.\nFocus on:\n- bugs\n- broken features\n- usability problems\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nWhen testing:\n- describe bugs\n- explain how to reproduce them\n- suggest fixes"
+          }
+        },
+        {
+          "panelId": "P7",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename this chat: \"Tester Lead\"."
+        },
+        {
+          "panelId": "P8",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Create Documentarian Lead Role, copy and paste this prompt:",
+          "promptBlock": "Prompt:\nYou are the Documentarian Lead agent.\nYour job is to record project progress.\nFocus on:\n- daily logs\n- decisions\n- summaries of work\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nKeep the project history clear and organized.",
+          "button": {
+            "label": "Copy Documentarian Prompt",
+            "type": "copy",
+            "value": "You are the Documentarian Lead agent.\nYour job is to record project progress.\nFocus on:\n- daily logs\n- decisions\n- summaries of work\nRules:\n- communicate only through agentCommunications.md\n- never speak directly to other agents\nKeep the project history clear and organized."
+          }
+        },
+        {
+          "panelId": "P9",
+          "mode": "do",
+          "iconKey": "rename",
+          "line": "Rename this chat: \"Documentarian\"."
+        }
+      ],
+      "diagram": {
+        "panelId": "PD",
+        "diagramId": "D-ROL-06",
+        "src": "d-rol-06-specialist-role-setup.svg",
+        "alt": "Role setup diagram for Designer Lead, Builder Lead, Tester Lead, and Documentarian Lead",
+        "callouts": [
+          "Designer Lead",
+          "Builder Lead",
+          "Tester Lead",
+          "Documentarian Lead",
+          "No Prompt Mixing"
+        ]
+      },
+      "checkPanelId": "P10",
+      "navPanelId": "P11",
+      "checks": [
+        "I created Designer Lead, Builder Lead, Tester Lead, and Documentarian chats.",
+        "Each chat is renamed correctly.",
+        "I did not mix prompt blocks across chats."
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "07-use-agentcom-and-start-sequence",
+      "path": "steps/07-use-agentcom-and-start-sequence.html",
+      "navLabel": "Start Project Manager",
+      "title": "Start Project Manager Workflow",
+      "stepNumberText": "07",
+      "goal": "If mission.md is complete, start the Project Manager and begin the assigned sequence.",
+      "goalIcon": "project-lead",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "project-lead",
+          "line": "Start Project Manager with this prompt after mission.md is complete.",
+          "promptBlock": "Paste this prompt:\nYou are the Project Manager agent for this student project.\nRead these files first:\nmission.md\nstudioKernel.md\nagentCommunications.md\n\nThen do the following in order:\n1) Use mission.md to understand project goals, users, and success criteria.\n2) Update agentCommunications.md with clear task IDs, assigned agents, and expected outputs.\n3) Output the Next Agent Sequence for the Human Director to message.\n\nDefault sequence is usually:\n1 Designer Lead\n2 Builder Lead\n3 Tester Lead\n4 Documentarian Lead\n\nYou may change the order if current tasks require it.\nInclude one short reason for your chosen sequence.",
+          "button": {
+            "label": "Copy PM Start Prompt",
+            "type": "copy",
+            "value": "You are the Project Manager agent for this student project.\nRead these files first:\nmission.md\nstudioKernel.md\nagentCommunications.md\n\nThen do the following in order:\n1) Use mission.md to understand project goals, users, and success criteria.\n2) Update agentCommunications.md with clear task IDs, assigned agents, and expected outputs.\n3) Output the Next Agent Sequence for the Human Director to message.\n\nDefault sequence is usually:\n1 Designer Lead\n2 Builder Lead\n3 Tester Lead\n4 Documentarian Lead\n\nYou may change the order if current tasks require it.\nInclude one short reason for your chosen sequence."
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "do",
+          "iconKey": "chat",
+          "line": "After PM updates agentCommunications.md, send this to assigned specialist leads in sequence order.",
+          "button": {
+            "label": "Copy Specialist Message",
+            "type": "copy",
+            "value": "read agentCommunications.md and do your tasks"
+          }
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-COM-02",
+        "src": "d-com-02-communication-rules.svg",
+        "alt": "Flow diagram showing Human Director starts Project Manager, Project Manager writes tasks in agentCommunications.md, then Human Director starts specialist leads in sequence",
+        "callouts": [
+          "Human starts PM",
+          "PM reads + writes tasks",
+          "Sequence to specialists",
+          "Send standard message"
+        ]
+      },
+      "template": {
+        "fileLabel": "project-manager-start-prompt.txt",
+        "templateAsset": "project-manager-start-prompt.txt",
+        "description": "Use this kickoff prompt to make Project Manager read the 3 files, write role tasks into agentCommunications.md, and return the next messaging sequence.",
+        "copyLabel": "Copy PM Start Prompt"
+      },
+      "checks": [
+        "mission.md is complete before I started Project Manager.",
+        "Project Manager updated agentCommunications.md with tasks and next-agent sequence.",
+        "I sent \"read agentCommunications.md and do your tasks\" to assigned leads in order."
+      ]
+    },
+    {
+      "id": 8,
+      "slug": "08-run-first-cycle-and-verify",
+      "path": "steps/08-run-first-cycle-and-verify.html",
+      "navLabel": "Run First Cycle",
+      "title": "Run First Cycle and Verify",
+      "stepNumberText": "08",
+      "goal": "Follow the PM sequence one agent at a time and verify updates.",
+      "goalIcon": "check",
+      "actions": [
+        {
+          "panelId": "P2",
+          "mode": "do",
+          "iconKey": "chat",
+          "line": "Read the PM sequence and message the first listed specialist lead.",
+          "button": {
+            "label": "Copy Start Cue",
+            "type": "copy",
+            "value": "read agentCommunications.md and do your tasks"
+          }
+        },
+        {
+          "panelId": "P3",
+          "mode": "warn",
+          "iconKey": "check",
+          "line": "Wait for that agent to finish, confirm their update in agentCommunications.md, then message the next agent in sequence with the same cue.",
+          "button": {
+            "label": "Copy Start Cue",
+            "type": "copy",
+            "value": "read agentCommunications.md and do your tasks"
+          }
+        }
+      ],
+      "diagram": {
+        "diagramId": "D-WKF-04",
+        "src": "d-wkf-04-workflow-sequence.svg",
+        "alt": "Workflow loop diagram showing repeat cycles",
+        "callouts": [
+          "Run",
+          "Log",
+          "Verify",
+          "Repeat"
+        ]
+      },
+      "template": {
+        "fileLabel": "cycle-verification.txt",
+        "templateAsset": "cycle-verification.txt",
+        "description": "Process one agent at a time: message the next lead in PM order, wait for their update in agentCommunications.md, then continue.",
+        "copyLabel": "Copy Verify List"
+      },
+      "checks": [
+        "I used the Project Manager sequence order.",
+        "I waited for each agent update in agentCommunications.md before messaging the next agent.",
+        "I sent the start cue each time: read agentCommunications.md and do your tasks."
+      ]
+    }
+  ]
+}

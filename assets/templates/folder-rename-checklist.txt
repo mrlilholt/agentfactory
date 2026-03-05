@@ -1,0 +1,4 @@
+1. Duplicate the starter folder once.
+2. Rename the copy to your project name.
+3. Keep letters, numbers, and dashes only.
+4. Open this renamed folder for all next steps.

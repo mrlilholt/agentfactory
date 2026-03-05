@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 656 136" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Folder Reference</title>
+  <desc id="desc">Reference screenshot style panel showing Add new project and folder icon location.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3E3F43"/>
+      <stop offset="1" stop-color="#2E2F33"/>
+    </linearGradient>
+  </defs>
+  <rect width="656" height="136" fill="url(#bg)"/>
+  <text x="26" y="34" fill="#F4F4F4" font-family="'IBM Plex Sans',sans-serif" font-size="22" font-weight="600">Threads</text>
+  <rect x="330" y="8" width="300" height="50" rx="22" fill="#2E2F33" stroke="#44464B" stroke-width="2"/>
+  <text x="346" y="39" fill="#F6F6F6" font-family="'IBM Plex Sans',sans-serif" font-size="40" font-weight="700">+</text>
+  <text x="382" y="39" fill="#F6F6F6" font-family="'IBM Plex Sans',sans-serif" font-size="20" font-weight="600">Add new project</text>
+  <rect x="582" y="18" width="38" height="30" rx="15" fill="#3A3C40"/>
+  <text x="594" y="39" fill="#D8D8D8" font-family="'IBM Plex Sans',sans-serif" font-size="16" font-weight="700">⌘O</text>
+  <rect x="454" y="68" width="44" height="44" rx="12" fill="#4B4D52"/>
+  <path d="M468 95h16l5-6h10v16h-31z" fill="none" stroke="#EDEDED" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="510" y="68" width="44" height="44" rx="12" fill="#4B4D52"/>
+  <path d="M522 83h20M522 90h20M522 97h20" stroke="#EDEDED" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

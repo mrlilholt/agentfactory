@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1632 200" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Factory Banner</title>
+  <desc id="desc">Blue top banner with Agent Factory branding.</desc>
+  <rect width="1632" height="200" fill="#0039A6"/>
+  <ellipse cx="225" cy="74" rx="210" ry="60" fill="#F4C900"/>
+  <text x="92" y="96" fill="#0039A6" font-family="'League Spartan','Arial Narrow',sans-serif" font-size="68" font-weight="700">AGENT</text>
+  <text x="75" y="170" fill="#8FC5FF" font-family="'IBM Plex Sans',sans-serif" font-size="62" font-weight="500" letter-spacing="3">FACTORY</text>
+
+  <g stroke="#8FC5FF" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1330 118L1456 70L1570 112" stroke-width="6"/>
+    <path d="M1344 112V76L1454 32L1552 72V102" stroke-width="5"/>
+    <path d="M1364 108V82L1456 44L1534 78V102" stroke-width="4"/>
+    <path d="M1368 126L1450 102L1528 124" stroke-width="6"/>
+    <path d="M1338 126L1426 126L1574 152L1390 152L1338 126Z" stroke-width="5"/>
+    <path d="M1388 152V176H1498V152" stroke-width="5"/>
+    <path d="M1416 152V176M1450 152V176M1482 152V176" stroke-width="4"/>
+    <path d="M1322 160L1566 160" stroke-width="5"/>
+    <path d="M1320 178L1560 178" stroke-width="5"/>
+  </g>
+</svg>

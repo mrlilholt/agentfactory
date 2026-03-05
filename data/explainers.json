@@ -1,0 +1,389 @@
+{
+  "diagramById": {
+    "D-STA-00": [
+      {
+        "id": "d-sta-download-starter-set",
+        "label": "Download starter set",
+        "whatThisIs": "Get Systems Starter Kit folder",
+        "howItConnects": "Starts setup with official files",
+        "group": "diagram-flow",
+        "order": 10,
+        "anchor": { "x": 25, "y": 64 },
+        "related": ["d-sta-unzip-downloaded-folder"]
+      },
+      {
+        "id": "d-sta-unzip-downloaded-folder",
+        "label": "Find folder on your computer",
+        "whatThisIs": "Locate the downloaded starter folder",
+        "howItConnects": "Confirms where you will work next",
+        "group": "diagram-flow",
+        "order": 11,
+        "anchor": { "x": 48, "y": 64 },
+        "related": ["d-sta-rename-for-findability"]
+      },
+      {
+        "id": "d-sta-rename-for-findability",
+        "label": "Rename folder",
+        "whatThisIs": "Rename folder to your project name",
+        "howItConnects": "Makes correct folder easy to find later",
+        "group": "diagram-flow",
+        "order": 12,
+        "anchor": { "x": 71, "y": 64 },
+        "related": ["d-sta-open-mission-plan"]
+      },
+      {
+        "id": "d-sta-open-mission-plan",
+        "label": "Open mission.md and plan next step",
+        "whatThisIs": "Open mission.md and fill plan",
+        "howItConnects": "Unlocks workflow after planning",
+        "group": "diagram-flow",
+        "order": 13,
+        "anchor": { "x": 94, "y": 64 }
+      }
+    ],
+    "D-FLD-03": [
+      {
+        "id": "d-fld-project-root-folder",
+        "label": "Project root folder",
+        "whatThisIs": "Main folder for this build",
+        "howItConnects": "Holds every required file",
+        "group": "diagram-structure",
+        "order": 10,
+        "anchor": { "x": 58, "y": 90 },
+        "related": ["d-fld-mission-md"]
+      },
+      {
+        "id": "d-fld-mission-md",
+        "label": "mission.md",
+        "whatThisIs": "Project goals file",
+        "howItConnects": "Must be completed before build flow",
+        "group": "diagram-structure",
+        "order": 11,
+        "anchorType": "line",
+        "anchor": { "x": 24, "y": 38 },
+        "related": ["d-fld-kernel-studio-kernel-file"]
+      },
+      {
+        "id": "d-fld-kernel-studio-kernel-file",
+        "label": "kernel/studio kernel file",
+        "whatThisIs": "Team roster and workflow rules file",
+        "howItConnects": "Defines roles and next-agent sequence",
+        "group": "diagram-structure",
+        "order": 12,
+        "anchorType": "line",
+        "anchor": { "x": 24, "y": 46 },
+        "related": ["d-fld-agentcom-agentcommunications-file"]
+      },
+      {
+        "id": "d-fld-agentcom-agentcommunications-file",
+        "label": "agentCom/agentCommunications file",
+        "whatThisIs": "Shared communication log",
+        "howItConnects": "All agent updates route through this file",
+        "group": "diagram-structure",
+        "order": 13,
+        "anchorType": "line",
+        "anchor": { "x": 24, "y": 54 }
+      }
+    ],
+    "D-CUE-06": [
+      {
+        "id": "d-cue-do-panel",
+        "label": "DO panel",
+        "whatThisIs": "Correct behavior example",
+        "howItConnects": "Shows what students should do next",
+        "group": "diagram-gate",
+        "order": 10,
+        "anchor": { "x": 31, "y": 56 },
+        "related": ["d-cue-dont-panel"]
+      },
+      {
+        "id": "d-cue-dont-panel",
+        "label": "DON'T panel",
+        "whatThisIs": "Blocked behavior example",
+        "howItConnects": "Prevents workflow mistakes",
+        "group": "diagram-gate",
+        "order": 11,
+        "anchor": { "x": 60, "y": 56 },
+        "related": ["d-cue-locked-panel"]
+      },
+      {
+        "id": "d-cue-locked-panel",
+        "label": "LOCKED panel",
+        "whatThisIs": "Non-editable protocol area",
+        "howItConnects": "Protects required fixed rules",
+        "group": "diagram-gate",
+        "order": 12,
+        "anchor": { "x": 88, "y": 56 },
+        "related": ["d-cue-mission-gate-rule"]
+      },
+      {
+        "id": "d-cue-mission-gate-rule",
+        "label": "Mission gate rule",
+        "whatThisIs": "Start condition before workflow",
+        "howItConnects": "Confirms when students can continue",
+        "group": "diagram-gate",
+        "order": 13,
+        "anchor": { "x": 88, "y": 93 }
+      }
+    ],
+    "D-STR-05": [
+      {
+        "id": "d-str-open-codex",
+        "label": "Open Codex",
+        "whatThisIs": "Launch Codex app",
+        "howItConnects": "Starts tool environment",
+        "group": "diagram-flow",
+        "order": 10,
+        "anchor": { "x": 26, "y": 65 },
+        "related": ["d-str-open-project-folder"]
+      },
+      {
+        "id": "d-str-open-project-folder",
+        "label": "Open project folder",
+        "whatThisIs": "Open renamed project folder",
+        "howItConnects": "Loads correct files for setup",
+        "group": "diagram-flow",
+        "order": 11,
+        "anchor": { "x": 49, "y": 65 },
+        "related": ["d-str-open-project-lead-chat"]
+      },
+      {
+        "id": "d-str-open-project-lead-chat",
+        "label": "Open Project Lead chat",
+        "whatThisIs": "Open the Project Lead chat",
+        "howItConnects": "Prepares planning sequence step",
+        "group": "diagram-flow",
+        "order": 12,
+        "anchor": { "x": 72, "y": 65 },
+        "related": ["d-str-send-exact-command"]
+      },
+      {
+        "id": "d-str-send-exact-command",
+        "label": "Send exact command",
+        "whatThisIs": "Use kickoff instruction text",
+        "howItConnects": "Triggers first task sequence",
+        "group": "diagram-flow",
+        "order": 13,
+        "anchor": { "x": 94, "y": 65 }
+      }
+    ],
+    "D-SYS-01": [
+      {
+        "id": "d-sys-human-director",
+        "label": "Human Director",
+        "whatThisIs": "Student leading the studio",
+        "howItConnects": "Starts flow by directing Project Manager",
+        "group": "diagram-system",
+        "order": 10,
+        "anchor": { "x": 30, "y": 61 },
+        "related": ["d-sys-project-manager"]
+      },
+      {
+        "id": "d-sys-project-manager",
+        "label": "Project Manager",
+        "whatThisIs": "Planner and task router",
+        "howItConnects": "Assigns next sequence to team",
+        "group": "diagram-system",
+        "order": 11,
+        "anchor": { "x": 62, "y": 61 },
+        "related": ["d-sys-specialist-leads"]
+      },
+      {
+        "id": "d-sys-specialist-leads",
+        "label": "Specialist leads",
+        "whatThisIs": "Designer/Builder/Tester/Docs roles",
+        "howItConnects": "Complete assigned project work",
+        "group": "diagram-system",
+        "order": 12,
+        "anchor": { "x": 94, "y": 69 },
+        "related": ["d-sys-no-direct-specialist-chat"]
+      },
+      {
+        "id": "d-sys-no-direct-specialist-chat",
+        "label": "No direct specialist chat",
+        "whatThisIs": "Blocked lead-to-lead shortcut",
+        "howItConnects": "Enforces communication-file protocol",
+        "group": "diagram-system",
+        "order": 13,
+        "anchorType": "line",
+        "anchor": { "x": 82, "y": 40 }
+      }
+    ],
+    "D-COM-02": [
+      {
+        "id": "d-com-human-starts-pm",
+        "label": "Human starts PM",
+        "whatThisIs": "Student starts Project Manager after mission.md is complete",
+        "howItConnects": "Begins the workflow at the correct gate",
+        "group": "diagram-protocol",
+        "order": 10,
+        "anchor": { "x": 31, "y": 44 },
+        "related": ["d-com-pm-reads-and-writes"]
+      },
+      {
+        "id": "d-com-pm-reads-and-writes",
+        "label": "PM reads + writes tasks",
+        "whatThisIs": "Project Manager reads 3 files and updates agentCommunications.md",
+        "howItConnects": "Converts mission goals into task IDs and assignments",
+        "group": "diagram-protocol",
+        "order": 11,
+        "anchor": { "x": 66, "y": 47 },
+        "related": ["d-com-sequence-to-specialists"]
+      },
+      {
+        "id": "d-com-sequence-to-specialists",
+        "label": "Sequence to specialists",
+        "whatThisIs": "Human Director starts lead roles in PM sequence order",
+        "howItConnects": "Usually Designer -> Builder -> Tester -> Documentarian, but can shift by task",
+        "group": "diagram-protocol",
+        "order": 12,
+        "anchor": { "x": 94, "y": 78 },
+        "related": ["d-com-standard-lead-message"]
+      },
+      {
+        "id": "d-com-standard-lead-message",
+        "label": "Send standard message",
+        "whatThisIs": "The default message sent to specialist leads",
+        "howItConnects": "Starts assigned work with: read agentCommunications.md and do your tasks",
+        "group": "diagram-protocol",
+        "order": 13,
+        "anchorType": "line",
+        "anchor": { "x": 57, "y": 90 }
+      }
+    ],
+    "D-ROL-06": [
+      {
+        "id": "d-rol-designer-lead",
+        "label": "Designer Lead role",
+        "whatThisIs": "Visual design specialist role",
+        "howItConnects": "Owns layout, colors, fonts, and UX guidance for the build",
+        "group": "diagram-roles",
+        "order": 10,
+        "anchor": { "x": 26, "y": 72 },
+        "related": ["d-rol-builder-lead"]
+      },
+      {
+        "id": "d-rol-builder-lead",
+        "label": "Builder Lead role",
+        "whatThisIs": "Implementation specialist role",
+        "howItConnects": "Writes beginner-friendly HTML, CSS, and JavaScript from assigned tasks",
+        "group": "diagram-roles",
+        "order": 11,
+        "anchor": { "x": 49, "y": 72 },
+        "related": ["d-rol-tester-lead"]
+      },
+      {
+        "id": "d-rol-tester-lead",
+        "label": "Tester Lead role",
+        "whatThisIs": "Quality and bug-check role",
+        "howItConnects": "Finds issues, explains reproduction steps, and proposes fixes",
+        "group": "diagram-roles",
+        "order": 12,
+        "anchor": { "x": 73, "y": 72 },
+        "related": ["d-rol-documentarian-lead"]
+      },
+      {
+        "id": "d-rol-documentarian-lead",
+        "label": "Documentarian role",
+        "whatThisIs": "Project record-keeping role",
+        "howItConnects": "Keeps logs, decisions, and work summaries organized for the team",
+        "group": "diagram-roles",
+        "order": 13,
+        "anchor": { "x": 96, "y": 72 },
+        "related": ["d-rol-no-mix-rule"]
+      },
+      {
+        "id": "d-rol-no-mix-rule",
+        "label": "No prompt mixing rule",
+        "whatThisIs": "Prompt-to-chat matching safety rule",
+        "howItConnects": "Prevents role confusion by keeping each prompt in the correct chat",
+        "group": "diagram-roles",
+        "order": 14,
+        "anchorType": "line",
+        "anchor": { "x": 50, "y": 88 }
+      }
+    ],
+    "D-WKF-04": [
+      {
+        "id": "d-wkf-install-open-codex",
+        "label": "Install/Open Codex",
+        "whatThisIs": "Tool startup step",
+        "howItConnects": "Required before project actions",
+        "group": "diagram-sequence",
+        "order": 10,
+        "anchor": { "x": 25, "y": 42 },
+        "related": ["d-wkf-starter-kit-rename"]
+      },
+      {
+        "id": "d-wkf-starter-kit-rename",
+        "label": "Starter kit + rename",
+        "whatThisIs": "Download, unzip, rename setup step",
+        "howItConnects": "Prepares correct working folder",
+        "group": "diagram-sequence",
+        "order": 11,
+        "anchor": { "x": 47, "y": 42 },
+        "related": ["d-wkf-core-files-mission"]
+      },
+      {
+        "id": "d-wkf-core-files-mission",
+        "label": "Core files + mission",
+        "whatThisIs": "Set files and complete mission",
+        "howItConnects": "Defines plan before agent workflow",
+        "group": "diagram-sequence",
+        "order": 12,
+        "anchor": { "x": 69, "y": 42 },
+        "related": ["d-wkf-kernel-chats-setup"]
+      },
+      {
+        "id": "d-wkf-kernel-chats-setup",
+        "label": "Kernel and chats setup",
+        "whatThisIs": "Prepare rules and role chats",
+        "howItConnects": "Enables agent coordination",
+        "group": "diagram-sequence",
+        "order": 13,
+        "anchor": { "x": 91, "y": 42 },
+        "related": ["d-wkf-prompt-setup"]
+      },
+      {
+        "id": "d-wkf-prompt-setup",
+        "label": "Prompt setup",
+        "whatThisIs": "Paste role prompts into chats",
+        "howItConnects": "Activates role behavior",
+        "group": "diagram-sequence",
+        "order": 14,
+        "anchor": { "x": 91, "y": 71 },
+        "related": ["d-wkf-start-project-lead"]
+      },
+      {
+        "id": "d-wkf-start-project-lead",
+        "label": "Start Project Manager",
+        "whatThisIs": "Send kickoff instruction to Project Manager",
+        "howItConnects": "Generates the Next Agent Sequence for Human Director",
+        "group": "diagram-sequence",
+        "order": 15,
+        "anchor": { "x": 69, "y": 71 },
+        "related": ["d-wkf-direct-assigned-agents"]
+      },
+      {
+        "id": "d-wkf-direct-assigned-agents",
+        "label": "Message assigned agents",
+        "whatThisIs": "Human messages one specialist at a time in PM order",
+        "howItConnects": "Use cue, wait for update in agentCommunications.md, then move to next",
+        "group": "diagram-sequence",
+        "order": 16,
+        "anchor": { "x": 47, "y": 71 },
+        "related": ["d-wkf-verify-repeat-cycle"]
+      },
+      {
+        "id": "d-wkf-verify-repeat-cycle",
+        "label": "Verify and repeat cycle",
+        "whatThisIs": "Check results and continue loop",
+        "howItConnects": "Confirms stable workflow pattern",
+        "group": "diagram-sequence",
+        "order": 17,
+        "anchor": { "x": 25, "y": 71 },
+        "related": ["d-wkf-install-open-codex"]
+      }
+    ]
+  }
+}

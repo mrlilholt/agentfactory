@@ -1,0 +1,7 @@
+1. Read the Next Agent Sequence from Project Manager.
+2. Message only the first listed specialist lead:
+   read agentCommunications.md and do your tasks
+3. Wait for that agent to finish and post updates in agentCommunications.md.
+4. Verify the update appears in agentCommunications.md.
+5. Message the next agent in sequence with the same cue.
+6. Repeat until the listed sequence is complete.
