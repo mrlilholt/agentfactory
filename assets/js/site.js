@@ -716,7 +716,7 @@
 
   function renderFinishPage(appRoot, steps, basePath, finishData) {
     var bannerPath = joinPath(basePath, 'assets/brand/agentTopBanner.svg');
-    var agentFactoryLogoPath = joinPath(basePath, 'assets/brand/agent-factory-logo.png');
+    var agentFactoryLogoPath = joinPath(basePath, 'assets/brand/logo-only.png');
     var completedSteps =
       window.AgencyChecks && window.AgencyChecks.getCompletedStepCount
         ? window.AgencyChecks.getCompletedStepCount(steps)
