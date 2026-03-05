@@ -920,7 +920,7 @@ a.button[aria-disabled='true'] {
   align-items: center;
 }
 
-.finish-recent-heading img {
+.finish-recent-heading .finish-recent-icon {
   width: 28px;
   height: 28px;
 }
@@ -933,11 +933,12 @@ a.button[aria-disabled='true'] {
 }
 
 .finish-inline-logo {
-  width: 120px;
+  width: 180px;
+  max-width: 100%;
   height: auto;
-  border: 2px solid var(--line);
-  border-radius: 8px;
-  background: #fff;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .recent-project-grid {

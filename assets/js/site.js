@@ -766,7 +766,7 @@
       (emailConfigured
         ? 'Your email app will open with the submission draft.'
         : 'Add your real email in data/finish.json under submissionEmail.') +
-      '</p></form></section><section class=\"finish-panel\"><div class=\"finish-recent-heading\"><img src=\"' +
+      '</p></form></section><section class=\"finish-panel\"><div class=\"finish-recent-heading\"><img class=\"finish-recent-icon\" src=\"' +
       joinPath(basePath, 'assets/icons/agent.svg') +
       '\" alt=\"Agent logo\"><h2>Recent Projects Created With the Help of <img class=\"finish-inline-logo\" src=\"' +
       agentFactoryLogoPath +
