@@ -613,7 +613,42 @@
       return false;
     }
 
-    return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function normalizeProjectUrl(url) {
+    if (!url || typeof url !== 'string') {
+      return '';
+    }
+
+    var value = url.trim();
+    if (!value) {
+      return '';
+    }
+
+    if (!/^https?:\/\//i.test(value)) {
+      value = 'https://' + value.replace(/^\/+/, '');
+    }
+
+    return value;
+  }
+
+  function getAutoProjectPreviewUrl(projectUrl) {
+    var safeUrl = normalizeProjectUrl(projectUrl);
+    if (!safeUrl) {
+      return '';
+    }
+
+    return 'https://image.thum.io/get/width/1200/noanimate/' + safeUrl;
+  }
+
+  function getProjectFaviconUrl(projectUrl) {
+    var safeUrl = normalizeProjectUrl(projectUrl);
+    if (!safeUrl) {
+      return '';
+    }
+
+    return 'https://www.google.com/s2/favicons?sz=128&domain_url=' + encodeURIComponent(safeUrl);
   }
 
   function renderRecentProjectCards(basePath, projects) {
@@ -631,16 +666,27 @@
 
           var safeTitle = escapeHtml(project.title);
           var safeAuthor = project.author ? escapeHtml(project.author) : 'Agent Factory Student';
+          var projectUrl = normalizeProjectUrl(project.url || '');
+          var thumbSrc = '';
+          var fallbackThumbSrc = '';
+
+          if (project.thumbnail && typeof project.thumbnail === 'string') {
+            thumbSrc = joinPath(basePath, project.thumbnail);
+          } else if (projectUrl) {
+            thumbSrc = getAutoProjectPreviewUrl(projectUrl);
+            fallbackThumbSrc = getProjectFaviconUrl(projectUrl);
+          } else {
+            thumbSrc = joinPath(basePath, 'assets/icons/agent.svg');
+          }
+
           var thumb =
-            project.thumbnail && typeof project.thumbnail === 'string'
-              ? '<img src="' +
-                escapeAttr(joinPath(basePath, project.thumbnail)) +
-                '" alt="' +
-                safeTitle +
-                ' thumbnail">'
-              : '<img src="' +
-                escapeAttr(joinPath(basePath, 'assets/icons/agent.svg')) +
-                '" alt="Project thumbnail placeholder">';
+            '<img class="recent-project-image" src="' +
+            escapeAttr(thumbSrc) +
+            '" alt="' +
+            safeTitle +
+            ' thumbnail"' +
+            (fallbackThumbSrc ? ' data-fallback-src="' + escapeAttr(fallbackThumbSrc) + '"' : '') +
+            '>';
 
           var body =
             '<div class="recent-project-thumb">' +
@@ -651,10 +697,10 @@
             safeAuthor +
             '</p></div>';
 
-          if (project.url && typeof project.url === 'string') {
+          if (projectUrl) {
             return (
               '<article class="recent-project-card"><a href="' +
-              escapeAttr(project.url) +
+              escapeAttr(projectUrl) +
               '" target="_blank" rel="noopener noreferrer">' +
               body +
               '</a></article>'
@@ -670,6 +716,7 @@
 
   function renderFinishPage(appRoot, steps, basePath, finishData) {
     var bannerPath = joinPath(basePath, 'assets/brand/agentTopBanner.svg');
+    var agentFactoryLogoPath = joinPath(basePath, 'assets/brand/agent-factory-logo.png');
     var completedSteps =
       window.AgencyChecks && window.AgencyChecks.getCompletedStepCount
         ? window.AgencyChecks.getCompletedStepCount(steps)
@@ -713,9 +760,7 @@
       joinPath(basePath, 'assets/icons/person.svg') +
       '" alt=\"Student icon\"></div><div><h1>Congratulations, you have successfully built and deployed your first agentic workflow system using AI Production Architecture.</h1><p>You completed the assembly workflow and now know how to coordinate a multi-agent build process.</p></div></section><section class=\"finish-panel\"><h2>Your Accomplishments</h2><ol class=\"finish-accomplishments\">' +
       accomplishments +
-      '</ol></section><section class=\"finish-panel\"><h2>Share Your Project Link (Selected Projects Only)</h2><p class=\"finish-share-recipient\">Submission email: <code data-share-email>' +
-      escapeHtml(submissionEmail || 'not configured') +
-      '</code></p><form class=\"finish-share-form\" data-share-form><label>Project name<input type=\"text\" name=\"projectName\" data-share-name placeholder=\"My Agent Project\"></label><label>Project link<input type=\"url\" name=\"projectUrl\" data-share-url placeholder=\"https://...\" required></label><label>Notes (optional)<textarea name=\"projectNotes\" data-share-notes rows=\"4\" placeholder=\"What does your project do?\"></textarea></label><button class=\"button\" type=\"submit\" data-share-submit' +
+      '</ol></section><section class=\"finish-panel\"><h2>Share Your Project Link (Selected Projects Only)</h2><form class=\"finish-share-form\" data-share-form><label>Project name<input type=\"text\" name=\"projectName\" data-share-name placeholder=\"My Agent Project\"></label><label>Project link<input type=\"url\" name=\"projectUrl\" data-share-url placeholder=\"https://...\" required></label><label>Notes (optional)<textarea name=\"projectNotes\" data-share-notes rows=\"4\" placeholder=\"What does your project do?\"></textarea></label><button class=\"button\" type=\"submit\" data-share-submit' +
       (emailConfigured ? '' : ' disabled aria-disabled=\"true\"') +
       '>Submit Project Link</button><p class=\"finish-share-note\" data-share-status>' +
       (emailConfigured
@@ -723,7 +768,9 @@
         : 'Add your real email in data/finish.json under submissionEmail.') +
       '</p></form></section><section class=\"finish-panel\"><div class=\"finish-recent-heading\"><img src=\"' +
       joinPath(basePath, 'assets/icons/agent.svg') +
-      '\" alt=\"Agent logo\"><h2>Recent Projects Created With the Help of Agent Factory</h2></div>' +
+      '\" alt=\"Agent logo\"><h2>Recent Projects Created With the Help of <img class=\"finish-inline-logo\" src=\"' +
+      agentFactoryLogoPath +
+      '\" alt=\"Agent Factory\"></h2></div>' +
       renderRecentProjectCards(basePath, data.recentProjects) +
       '</section></main>';
 
@@ -766,6 +813,18 @@
         encodeURIComponent(subject) +
         '&body=' +
         encodeURIComponent(body);
+    });
+
+    appRoot.querySelectorAll('.recent-project-image[data-fallback-src]').forEach(function (image) {
+      image.addEventListener('error', function () {
+        var fallbackSrc = image.getAttribute('data-fallback-src');
+        if (!fallbackSrc || image.src === fallbackSrc) {
+          return;
+        }
+
+        image.src = fallbackSrc;
+        image.classList.add('is-fallback');
+      });
     });
   }
 

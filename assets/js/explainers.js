@@ -91,13 +91,7 @@
     marker.style.left = clamp(x, 4, 96) + '%';
     marker.style.top = clamp(y, 6, 94) + '%';
 
-    marker.innerHTML =
-      '<span class="explainer-marker-dot">' +
-      '?' +
-      '</span>' +
-      '<span class="explainer-tooltip" role="tooltip">' +
-      (item.label || 'Part') +
-      '</span>';
+    marker.innerHTML = '<span class="explainer-marker-dot">?</span>';
 
     return marker;
   }
