@@ -1,4 +1,15 @@
 {
   "submissionEmail": "restaurantradioapp@gmail.com",
-  "recentProjects": []
+  "recentProjects": [
+    {
+      "title": "The Agent Factory",
+      "author": "Selected Project",
+      "url": "https://theagentfactory.netlify.app/"
+    },
+    {
+      "title": "Cast Fishing",
+      "author": "Selected Project",
+      "url": "https://castfishing.netlify.app/login"
+    }
+  ]
 }
