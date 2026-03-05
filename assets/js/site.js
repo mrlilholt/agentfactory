@@ -633,22 +633,45 @@
     return value;
   }
 
-  function getAutoProjectPreviewUrl(projectUrl) {
+  function getProjectHomepageUrl(projectUrl) {
     var safeUrl = normalizeProjectUrl(projectUrl);
     if (!safeUrl) {
       return '';
     }
 
-    return 'https://image.thum.io/get/width/1200/noanimate/' + safeUrl;
+    try {
+      var parsed = new URL(safeUrl);
+      return parsed.origin + '/';
+    } catch (error) {
+      return safeUrl;
+    }
+  }
+
+  function getAutoProjectPreviewUrl(projectUrl) {
+    var homepageUrl = getProjectHomepageUrl(projectUrl);
+    if (!homepageUrl) {
+      return '';
+    }
+
+    return 'https://image.thum.io/get/width/1200/noanimate/' + encodeURI(homepageUrl);
+  }
+
+  function getAutoProjectPreviewBackupUrl(projectUrl) {
+    var homepageUrl = getProjectHomepageUrl(projectUrl);
+    if (!homepageUrl) {
+      return '';
+    }
+
+    return 'https://free.pagepeeker.com/v2/thumbs.php?size=x&url=' + encodeURIComponent(homepageUrl);
   }
 
   function getProjectFaviconUrl(projectUrl) {
-    var safeUrl = normalizeProjectUrl(projectUrl);
-    if (!safeUrl) {
+    var homepageUrl = getProjectHomepageUrl(projectUrl);
+    if (!homepageUrl) {
       return '';
     }
 
-    return 'https://www.google.com/s2/favicons?sz=128&domain_url=' + encodeURIComponent(safeUrl);
+    return 'https://www.google.com/s2/favicons?sz=128&domain_url=' + encodeURIComponent(homepageUrl);
   }
 
   function renderRecentProjectCards(basePath, projects) {
@@ -668,15 +691,27 @@
           var safeAuthor = project.author ? escapeHtml(project.author) : 'Agent Factory Student';
           var projectUrl = normalizeProjectUrl(project.url || '');
           var thumbSrc = '';
-          var fallbackThumbSrc = '';
+          var fallbackChain = [];
+          var localFallbackThumb = joinPath(basePath, 'assets/icons/agent.svg');
 
           if (project.thumbnail && typeof project.thumbnail === 'string') {
             thumbSrc = joinPath(basePath, project.thumbnail);
           } else if (projectUrl) {
             thumbSrc = getAutoProjectPreviewUrl(projectUrl);
-            fallbackThumbSrc = getProjectFaviconUrl(projectUrl);
+            var backupPreview = getAutoProjectPreviewBackupUrl(projectUrl);
+            var faviconPreview = getProjectFaviconUrl(projectUrl);
+
+            if (backupPreview && backupPreview !== thumbSrc) {
+              fallbackChain.push(backupPreview);
+            }
+
+            if (faviconPreview) {
+              fallbackChain.push(faviconPreview);
+            }
+
+            fallbackChain.push(localFallbackThumb);
           } else {
-            thumbSrc = joinPath(basePath, 'assets/icons/agent.svg');
+            thumbSrc = localFallbackThumb;
           }
 
           var thumb =
@@ -685,7 +720,7 @@
             '" alt="' +
             safeTitle +
             ' thumbnail"' +
-            (fallbackThumbSrc ? ' data-fallback-src="' + escapeAttr(fallbackThumbSrc) + '"' : '') +
+            (fallbackChain.length > 0 ? ' data-fallback-chain="' + escapeAttr(fallbackChain.join('|')) + '"' : '') +
             '>';
 
           var body =
@@ -815,15 +850,23 @@
         encodeURIComponent(body);
     });
 
-    appRoot.querySelectorAll('.recent-project-image[data-fallback-src]').forEach(function (image) {
+    appRoot.querySelectorAll('.recent-project-image[data-fallback-chain]').forEach(function (image) {
       image.addEventListener('error', function () {
-        var fallbackSrc = image.getAttribute('data-fallback-src');
-        if (!fallbackSrc || image.src === fallbackSrc) {
+        var chain = (image.getAttribute('data-fallback-chain') || '')
+          .split('|')
+          .filter(Boolean);
+
+        if (chain.length === 0) {
           return;
         }
 
-        image.src = fallbackSrc;
-        image.classList.add('is-fallback');
+        var nextSrc = chain.shift();
+        image.setAttribute('data-fallback-chain', chain.join('|'));
+        image.src = nextSrc;
+
+        var isFallbackVisual =
+          nextSrc.indexOf('google.com/s2/favicons') !== -1 || nextSrc.indexOf('assets/icons/agent.svg') !== -1;
+        image.classList.toggle('is-fallback', isFallbackVisual);
       });
     });
   }
